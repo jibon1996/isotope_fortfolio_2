@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixitup portfolio</title>
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- boostrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="isothope">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="item_menu">
+                        <ul>
+                            <li class="active" data-filter="*" >All</li>
+                            <li data-filter=".web" >web Developer</li>
+                            <li data-filter=".Grapigs">Grapigs Designer</li>
+                            <li data-filter=".Seo">Seo Expert</li>
+                            <li data-filter=".Digital">Digital Marketing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="itmes">
+                <div class="col-md-4 web" >
+                    <img class="w-100" src="img/image-1.jpg" alt="">
+                    <p> Abdur Rahman</p>
+                    <h2>web Developer</h2>
+                </div>
+                <div class="col-md-4 Grapigs" >
+                    <img src="img/imgae-2.jpg" alt="">
+                    <p>Siam Mia</p>
+                    <h2>Grapigs Designer</h2>
+                </div>
+                <div class="col-md-4 Seo" >
+                    <img src="img/image-3.jpg" alt="">
+                    <p>Billal Hussain</p>
+                    <h2>Seo Expert</h2>
+                </div>
+                <div class="col-md-4 Digital" >
+                    <img src="img/image-5.jpg" alt="">
+                    <p>Meraj Khan</p>
+                    <h2>Digital Marketing</h2>
+                </div>
+
+                <div class="col-md-4 web" >
+                    <img class="w-100" src="img/image-4.jpg" alt="">
+                    <p>Arman mia</p>
+                    <h2>Web Developer</h2>
+                </div>
+                <div class="col-md-4 web" >
+                    <img src="img/image-7.jpg" alt="">
+                    <p>Siam Mia</p>
+                    <h2>web Developer</h2>
+                </div>
+                <div class="col-md-4 Digital" >
+                    <img src="img/image-3.jpg" alt="">
+                    <p>Billal Hussain</p>
+                    <h2>Digital Marketing</h2>
+                </div>
+                <div class="col-md-4 Grapigs" >
+                    <img src="img/image-5.jpg" alt="">
+                    <p>Meraj Khan</p>
+                    <h2>Grapigs Designer</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <!-- jquery js cdn  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- isothope cdn  -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <script>
+        // init Isotope
+            var $grid = $('#itmes').isotope({
+            // options
+            });
+            // filter items on button click
+            $('.item_menu').on( 'click', 'li', function() {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+
+            });
+            
+            // filter items on button active and remove 
+            $('.item_menu ').on( 'click', 'li', function() {
+             $(this).siblings('.active').removeClass('active');
+             $(this).addClass('active');
+            
+            });
+            
+           
+
+
+            
+    </script>
+    
+</body>
+</html>

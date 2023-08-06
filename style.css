@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.item_menu ul{
+   list-style: none;
+   text-align: center;
+   margin-top: 30px;
+}
+.item_menu ul li{
+    display: inline-block;
+    margin: 10px;
+    padding:10px 20px;
+    border: 1px solid salmon;
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+}
+.item_menu ul li:hover{
+    background-color: salmon;
+    color:#fff;
+}
+.active{
+    background-color: salmon;
+    color:#fff;
+}
+.isothope img{
+    width:356px;
+    height: 427px;
+    object-fit: contain;
+}
+.data-filter-active{
+    background-color: salmon;
+    color:#fff;
+}
